@@ -48,7 +48,14 @@
                 <tbody>
                     @if (count($invitations) > 0)
                         @foreach ($invitations as $invitation)
-                            <tr data-entry-id="{{ $invitation->id }}">
+                            <tr data-entry-id="{{ $invitation->id }}" 
+                                @if (!empty($invitation->accepted_at))
+                                    class="success"
+                                @endif
+                                @if (!empty($invitation->rejected_at))
+                                    class="danger"
+                                @endif
+                                >
                                 @can('invitation_delete')
                                     @if ( request('show_deleted') != 1 )<td></td>@endif
                                 @endcan
@@ -57,7 +64,7 @@
                                 <td field-key='fullname'>{{ $invitation->fullname }}</td>
                                 <td field-key='email'>{{ $invitation->email }}</td>
                                 <td field-key='sent_at'>{{ $invitation->sent_at }}</td>
-                                <td field-key='accepted_at'>{{ $invitation->accepted_at }}</td>
+                                <td field-key='accepted_at'> {{ $invitation->accepted_at }}</td>
                                 <td field-key='rejected_at'>{{ $invitation->rejected_at }}</td>
                                 @if( request('show_deleted') == 1 )
                                 <td>

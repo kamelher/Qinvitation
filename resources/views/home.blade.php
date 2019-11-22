@@ -67,7 +67,7 @@
             </div>
     </div>
     @endforeach
-    <div class="row">
+    {{-- <div class="row">
         <div class="col-md-12">
             <div class="panel panel-default">
                 <div class="panel-heading">@lang('global.app_dashboard')</div>
@@ -77,5 +77,5 @@
                 </div>
             </div>
         </div>
-    </div>
+    </div> --}}
 @endsection
