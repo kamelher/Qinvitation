@@ -15,7 +15,8 @@
     "laravel/dusk": "^2.0",
     "laravel/framework": "5.6.*",
     "laravel/tinker": "~1.0",
-    "laravelcollective/html": "^5.5"
+    "laravelcollective/html": "^5.5",
+    "symfony/http-foundation": "3.4.35"
   },
   "require-dev": {
     "filp/whoops": "~2.0",
